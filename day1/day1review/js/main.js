@@ -7,10 +7,10 @@ Day 1 Review
 
 //Invocation is calling a function
 
-var grades = [40,80,100,110];
+var grades=[40,80,100,110];
 
 //array access notation
-var g = grades[0];
+var g=grades[0];
 //grades sub zero^ that's how you would say it
 
 console.log(g);
@@ -29,17 +29,26 @@ console.log(grades);
 
 
 //once given an array it will examine the array and return the lowest number in that array
-var data = [3,5,7,4,9,2,5,7];
+var data = [3,4,3,4,9,2,5,7];
+var data2 = [3,4,5];
 
-function lowestNum(arr){
-  var lowNum = arr[0];
-  for(var i=1;i<arr.length;i++){
-    if(arr[i] < lowNum){
-      var lowest = arr[i];
-      console.log(lowest);
+
+console.log(lowestNum(data));
+console.log(findNum(data2,4));
+
+function findNum(arr,n){
+  for(var i=0;i<arr.length;i++)
+    if(arr[i]===n){
+      
     }
-  }
-
 }
 
-lowestNum(data);
+function lowestNum(arr){
+  var lowNum=arr[0];
+  for(var i=1;i<arr.length;i++){
+    if(arr[i]<lowNum){
+      lowNum=arr[i];
+    }
+  }
+  return lowNum;
+}
